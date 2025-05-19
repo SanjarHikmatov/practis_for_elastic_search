@@ -1,0 +1,11 @@
+Django==5.2.1
+django-filter==25.1
+djangorestframework==3.16.0
+djangorestframework_simplejwt==5.5.0
+drf-yasg==1.21.10
+Faker==37.3.0
+loadenv==0.1.1
+pillow==11.2.1
+PyJWT==2.9.0
+python-dotenv==1.1.0
+requests==2.32.3
