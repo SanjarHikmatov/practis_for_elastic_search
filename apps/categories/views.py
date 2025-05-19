@@ -3,9 +3,10 @@ from drf_yasg import openapi
 
 from rest_framework import viewsets, filters
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import Category
-from .serializer import CategorySerializer
-from .filter import CategoryFilter
+from apps.categories.models import Category
+from apps.categories.serializer import CategorySerializer
+from apps.categories.filter import CategoryFilter
+
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.filter(is_active=True).order_by('-created_at')
@@ -24,5 +25,6 @@ class CategoryViewSet(viewsets.ModelViewSet):
             openapi.Parameter('parent', openapi.IN_QUERY, description="Filter by parent category id", type=openapi.TYPE_INTEGER),
         ]
     )
+
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)

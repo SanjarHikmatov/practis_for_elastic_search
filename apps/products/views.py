@@ -6,6 +6,7 @@ from apps.products.filter import ProductFilter
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 
+
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -26,5 +27,6 @@ class ProductViewSet(viewsets.ModelViewSet):
         openapi.Parameter('category', openapi.IN_QUERY, description="Category ID", type=openapi.TYPE_INTEGER),
         openapi.Parameter('brand', openapi.IN_QUERY, description="Brand name contains", type=openapi.TYPE_STRING),
     ])
+    
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)

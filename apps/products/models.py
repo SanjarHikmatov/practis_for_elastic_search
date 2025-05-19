@@ -1,6 +1,4 @@
 from django.db import models
-from django.utils.text import slugify
-from rest_framework.status import HTTP_431_REQUEST_HEADER_FIELDS_TOO_LARGE
 
 
 class Product(models.Model):
