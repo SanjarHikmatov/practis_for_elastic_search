@@ -1,5 +1,5 @@
 staticfiles/
-products/
+product/
 .env
 .idea
 venv
